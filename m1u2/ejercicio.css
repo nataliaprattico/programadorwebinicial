@@ -26,7 +26,7 @@ h3 {
     display: flex;
     justify-content: center;
     margin: 20px 0;
-  }
+}
 
 .mi-imagen {
     display: flex;
@@ -46,12 +46,12 @@ h3 {
     text-align: left;
 }
 
-    .titulos {
-        text-decoration: underline;
-        text-align: center;
-    }
+.titulos {
+    text-decoration: underline;
+    text-align: center;
+}
 
-    #fijo {
+ #fijo {
         display: flex;
         position: fixed;
         justify-content: center;
@@ -68,24 +68,24 @@ h3 {
         padding-bottom: 15px;
     }
 
-    .contenedor {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        padding: 30px;
-    }
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+}
 
-    .caja {
-        text-align: center;
-        width: 350px;
-        height: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #97835c;
-        border-radius: 41px 41px 41px 41px;
-        background-color: whitesmoke;
-        box-shadow: 10px 10px 30px 0px rgba(255, 255, 255, 0.75);
-    }
+.caja {
+    text-align: center;
+    width: 350px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #97835c;
+    border-radius: 41px 41px 41px 41px;
+    background-color: whitesmoke;
+    box-shadow: 10px 10px 30px 0px rgba(255, 255, 255, 0.75);
+}
