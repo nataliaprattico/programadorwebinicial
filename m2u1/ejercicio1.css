@@ -1,0 +1,18 @@
+.color-box {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+#rojo {
+  background-color: red;
+}
+#verde {
+  background-color: green;
+}
+#azul {
+  background-color: blue;
+}
