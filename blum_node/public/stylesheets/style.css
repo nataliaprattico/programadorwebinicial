@@ -1,0 +1,220 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f1f0ed;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 350;
+
+}
+
+footer {
+    background-color: darkgrey;
+}
+
+.hero-imagen {
+    height: 520px;
+}
+
+.hero-imagen img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar {
+    background-color: #f1f0ed;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    height: 55px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.titulo-novedad {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.imagen-hover-wrapper {
+    overflow: hidden;
+}
+
+.imagen-hover,
+.texto-hover {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.imagen-hover-wrapper:hover .imagen-hover,
+.imagen-hover-wrapper:hover .texto-hover {
+    opacity: 1;
+}
+
+.imagen-hover-wrapper:hover .imagen-normal,
+.imagen-hover-wrapper:hover .texto-normal {
+    opacity: 0;
+}
+
+.imagen-ajustada {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-item {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.object-cover {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    color: #4a4a4a;
+    font-size: 2.5rem;
+    font-weight: 350;
+
+}
+
+.contenedor-dos-columnas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    gap: 40px;
+}
+
+.parrafo-valores {
+    background-color: white;
+    padding: 30px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #4a4a4a;
+}
+
+.imagen-valores {
+    width: 50%;
+    height: 100%;
+}
+
+.imagen-valores img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.card-img-top {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+.card-body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #4a4a4a;
+}
+
+.card-sub-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #4a4a4a;
+}
+
+.card-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+
+.contenedor-dos-recuadros {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    height: 500px;
+}
+
+.recuadro {
+    height: 500px;
+    background-color: white;
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 0.5rem;
+    box-sizing: border-box
+}
+
+.mapa {
+    flex: 1;
+    margin-top: 20px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: none;
+    border-radius: 8px;
+}
+
+.form-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #4a4a4a;
+}
+
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll_section {
+    scroll-margin-top: 60px;
+}
