@@ -1,45 +1,63 @@
-<div class="container" style="margin:50px auto">
-    <div class="row">
-        <div class="col">
-            <p class="text-right">Hola {{Usuario}} ! <a href="/admin/login/logout" class="btn btn-sm btn-danger">Cerrar
-                    sesión<i class="fa-solid fa-arrow-right-from-bracket"></i>
-                </a></p>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top position-relative">
+  <div class="container-fluid">
+    <!-- Marca centrada -->
+    <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#">blum</a>
 
-</div>
-<div class="row">
-    <div class="col-7">
-        <h3>Listado de Novedades</h3>
+    <!-- Botón cerrar sesión a la derecha -->
+    <div class="d-flex ms-auto">
+      <a href="/admin/login/logout" class="btn btn-sm btn-danger">
+        Cerrar sesión <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a>
     </div>
-    <div class="col-2 text-right">
-        <a href="/admin/novedades/agregar" class="btn btn-success"> <i class="fa-solid fa-plus"></i>Nuevo</a>
+  </div>
+</nav>
+
+<div class="novedades-admin">
+  <!-- Saludo centrado -->
+  <div class="row mb-4 novedades-header">
+    <div class="col d-flex justify-content-center align-items-center">
+      <p class="mb-0">¡Hola, {{Usuario}}!</p>
     </div>
-</div>
-<div class="row">
+  </div>
+
+  <!-- Título y botón "Nuevo" -->
+  <div class="row align-items-center mb-3 novedades-header">
+    <div class="col d-flex justify-content-between align-items-center">
+      <h3 class="mb-0">Listado de Novedades</h3>
+      <a href="/admin/novedades/agregar" class="btn btn-success">
+        <i class="fa-solid fa-plus"></i> Nuevo
+      </a>
+    </div>
+  </div>
+
+  <!-- Tabla de novedades -->
+  <div class="row">
     <div class="col">
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Título</th>
-                    <th scope="col" class="text-center">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each novedades}}
-                <tr>
-                    <th scope="row">{{id}}</th>
-                    <td>{{titulo}}</td>
-                    <td class="text-center">
-                        <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary">
-                            <i class="fa-solid fa-pen"></i></a>
-                        <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary">
-                            <i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                {{/each}}
-            </tbody>
-        </table>
+      <table class="table table-hover table-bordered shadow-sm">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Título</th>
+            <th scope="col" class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each novedades}}
+          <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{titulo}}</td>
+            <td class="text-center">
+              <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-pen"></i>
+              </a>
+              <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-danger btn-sm">
+                <i class="fa-solid fa-trash"></i>
+              </a>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>
