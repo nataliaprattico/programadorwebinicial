@@ -1,26 +1,51 @@
-<div class="container" style="margin:100px 0">
-    <div class="row">
-        <div class="col-6 offset-3">
-            <h4>Modificar la novedad nro {{novedad.id}}</h4>
-            <form action="/admin/novedades/modificar" method="post">
-                <input type="hidden" value="{{novedad.id}}" name="id">
-                <div class="form-group">
-                    <label for="">Titulo</label>
-                    <input type="text" class="form-control" name="titulo" value="{{novedad.titulo}}">
-                </div>
-                <div class="form-group">
-                    <label for="">Subtitulo</label>
-                    <input type="text" class="form-control" name="subtitulo" value="{{novedad.subtitulo}}">
-                </div>
-                <div class="form-group">
-                    <label for="">Cuerpo</label>
-                    <textarea class="form-control" name="cuerpo">{{novedad.cuerpo}}</textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Modificar</button>
-            </form>
-            {{#if error}}
-            <p>{{message}}</p>
-            {{/if}}
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top position-relative">
+  <div class="container-fluid">
+    <!-- Marca centrada -->
+    <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#">blum</a>
+  </div>
+</nav>
+
+<!-- Contenido con margen superior para que no lo tape la navbar -->
+<div class="container mt-5 pt-4">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h4>Modificar el producto nro {{producto.id}}</h4>
+      <form action="/admin/productos/modificar" method="post">
+        <input type="hidden" value="{{producto.id}}" name="id">
+
+        <div class="form-group mb-3">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" name="nombre" id="nombre" value="{{producto.nombre}}">
         </div>
+        <div class="form-group mb-3">
+          <label for="precio">Precio</label>
+          <input type="number" step="0.01" class="form-control" name="precio" id="precio" value="{{producto.precio}}">
+        </div>
+        <div class="form-group mb-3">
+          <label for="descripcion">Descripción</label>
+          <textarea class="form-control" name="descripcion" id="descripcion">{{producto.descripcion}}</textarea>
+        </div>
+
+        <div class="form-group mb-3">
+          <label>Imagen actual</label><br>
+          {{#if producto.imagen}}
+          <img src="/img/productos/{{producto.imagen}}" alt="{{producto.nombre}}"
+            style="width: 120px; height: auto; border-radius: 6px; margin-bottom:10px;">
+          {{else}}
+          <span class="text-muted">Sin imagen</span>
+          {{/if}}
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="imagen">Cambiar imagen</label>
+          <input type="text" class="form-control" placeholder="Imagen (ej: limpiadorblum.jpg)" name="imagen">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Modificar</button>
+      </form>
+      {{#if error}}
+      <p class="text-danger mt-2">{{message}}</p>
+      {{/if}}
     </div>
+  </div>
 </div>

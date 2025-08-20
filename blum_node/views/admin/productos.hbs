@@ -12,45 +12,57 @@
   </div>
 </nav>
 
-<div class="novedades-admin">
+<div class="productos-admin">
   <!-- Saludo centrado -->
-  <div class="row mb-4 novedades-header">
+  <div class="row mb-4 productos-header">
     <div class="col d-flex justify-content-center align-items-center">
-      <p class="mb-0">¡Hola, {{Usuario}}!</p>
+      <p class="mb-0">¡Hola, {{usuario}}!</p>
     </div>
   </div>
 
   <!-- Título y botón "Nuevo" -->
-  <div class="row align-items-center mb-3 novedades-header">
+  <div class="row align-items-center mb-3 productos-header">
     <div class="col d-flex justify-content-between align-items-center">
-      <h3 class="mb-0">Listado de Novedades</h3>
-      <a href="/admin/novedades/agregar" class="btn btn-success">
+      <h3 class="mb-0">Listado de Productos</h3>
+      <a href="/admin/productos/agregar" class="btn btn-success">
         <i class="fa-solid fa-plus"></i> Nuevo
       </a>
     </div>
   </div>
 
-  <!-- Tabla de novedades -->
+  <!-- Tabla de productos -->
   <div class="row">
     <div class="col">
       <table class="table table-hover table-bordered shadow-sm">
         <thead class="thead-dark">
           <tr>
-            <th scope="col"></th>
-            <th scope="col">Título</th>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Imagen</th>
             <th scope="col" class="text-center">Acciones</th>
           </tr>
         </thead>
         <tbody>
-          {{#each novedades}}
+          {{#each productos}}
           <tr>
             <th scope="row">{{id}}</th>
-            <td>{{titulo}}</td>
+            <td>{{{nombre}}}</td>
+            <td>{{precio}}</td>
+            <td>{{{descripcion}}}</td>
+            <td>
+              {{#if imagen}}
+                <img src="/img/productos/{{imagen}}" alt="{{nombre}}" style="width: 80px; height: auto; border-radius: 6px;">
+              {{else}}
+                <span class="text-muted">Sin imagen</span>
+              {{/if}}
+            </td>
             <td class="text-center">
-              <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary btn-sm">
+              <a href="/admin/productos/modificar/{{id}}" class="btn btn-secondary btn-sm">
                 <i class="fa-solid fa-pen"></i>
               </a>
-              <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-danger btn-sm">
+              <a href="/admin/productos/eliminar/{{id}}" class="btn btn-danger btn-sm">
                 <i class="fa-solid fa-trash"></i>
               </a>
             </td>

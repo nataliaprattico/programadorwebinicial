@@ -217,6 +217,13 @@ h2 {
     border-radius: 0.5rem;
 }
 
+.parrafo-equipo {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #4a4a4a; 
+}
+
+
 #tarjetas {
     margin-left: 0;
     margin-right: 0;
@@ -363,29 +370,29 @@ body {
     font-size: 0.9rem;
 }
 
-/* DISEÑO NOVEDADES*/
+/* DISEÑO PRODUCTOS*/
 body.admin-page {
     background-color: #dbcec2;
     font-family: 'Inter', sans-serif;
 }
 
-.novedades-admin {
+.productos-admin {
     padding: 80px 20px 40px;
     font-family: 'Inter', sans-serif;
 }
 
-.novedades-header {
+.productos-header {
     font-family: 'Orbitron', sans-serif;
     font-size: 2.0rem;
     font-weight: bold;
     color: #4a4a4a;
 }
 
-.novedades-admin h3 {
+.productos-admin h3 {
     color: #4a4a4a;
 }
 
-.novedades-admin table {
+.productos-admin table {
     border-collapse: separate;
     border-radius: 8px;
     overflow: hidden;
@@ -393,30 +400,30 @@ body.admin-page {
     margin-bottom: 90px;
 }
 
-.novedades-admin thead th {
+.productos-admin thead th {
     background-color: #4a4a4a !important;
     color: #f9f9f9 !important;
 }
 
-.novedades-admin thead th:first-child {
+.productos-admin thead th:first-child {
     border-top-left-radius: 8px;
 }
 
-.novedades-admin thead th:last-child {
+.productos-admin thead th:last-child {
     border-top-right-radius: 8px;
 }
 
-.novedades-admin tbody tr th,
-.novedades-admin tbody tr td {
+.productos-admin tbody tr th,
+.productos-admin tbody tr td {
     background-color: #f9f9f9 !important;
 }
 
-.novedades-admin tbody tr:hover th,
-.novedades-admin tbody tr:hover td {
+.productos-admin tbody tr:hover th,
+.productos-admin tbody tr:hover td {
     background-color: #e2dfd8 !important;
 }
 
-.novedades-admin .btn-success {
+.productos-admin .btn-success {
     background-color: #28a745;
     border: none;
     margin-right: 10px;
@@ -424,12 +431,12 @@ body.admin-page {
     font-family: 'Inter', sans-serif;
 }
 
-.novedades-admin .btn-secondary {
+.productos-admin .btn-secondary {
     background-color: #6c757d;
     border: none;
 }
 
-.novedades-admin .btn-danger {
+.productos-admin .btn-danger {
     background-color: #dc3545;
     border: none;
     font-size: 0.9rem;

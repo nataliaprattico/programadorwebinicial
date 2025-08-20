@@ -1,18 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var nodemailer = require('nodemailer')
-var novedadesModel = require('../models/novedadesModel');
+var nodemailer = require('nodemailer');
+var productosModel = require('../models/productosModel');
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  var novedades = await novedadesModel.getNovedades()
+  // traigo los productos en lugar de novedades
+  var productos = await productosModel.getProductos();
   res.render('index', {
-    novedades
+    productos
   });
 });
 
 router.post('/', async (req, res, next) => {
-
   var nombre = req.body.nombre;
   var email = req.body.email;
   var telefono = req.body.telefono;
@@ -24,10 +24,10 @@ router.post('/', async (req, res, next) => {
     to: 'natalia.prattico@gmail.com',
     subject: 'CONTACTO WEB BLUM',
     html: `
-    <strong>${nombre}</strong> se contactó a través de la web y quiere más información al correo: <strong>${email}</strong>.<br>
-    Además, hizo este comentario: <em>${mensaje}</em>.<br>
-    Su teléfono es: <strong>${telefono}</strong>.
-  `
+      <strong>${nombre}</strong> se contactó a través de la web y quiere más información al correo: <strong>${email}</strong>.<br>
+      Además, hizo este comentario: <em>${mensaje}</em>.<br>
+      Su teléfono es: <strong>${telefono}</strong>.
+    `
   };
 
   const transport = nodemailer.createTransport({

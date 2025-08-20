@@ -119,121 +119,25 @@
 
 <!-- ACÁ EMPIEZA PRODUCTOS -->
 <div id="productos" class="container productos-seccion py-5 scroll_section">
-    <div class="row g-4">
-        
-        <!-- Limpiador -->
-        <div class="col-md-4">
-            <div class="card producto-card">
-                <img src="/img/limpiadorblum.jpg" class="producto-img" alt="limpiador">
-                <div class="card-body producto-body">
-                    <h5 class="card-title">Gel limpiador<br>235 ml</h5>
-                    <p class="card-text">$19.999</p>
-                    <div class="tooltip-container">
-                        <a href="#" class="btn btn-ver-mas">Ver más</a>
-                        <div class="tooltip-descripcion">
-                            <strong>Limpieza suave. Hidratación esencial.</strong><br>Gel limpiador facial que purifica sin resecar. Textura ligera, apta para todo tipo de pieles. Deja el rostro limpio, fresco y equilibrado. 
-                        </div>
-                    </div>
-                </div>
+  <div class="row g-4">
+    {{#each productos}}
+      <div class="col-md-4">
+        <div class="card producto-card">
+          <img src="/img/productos/{{imagen}}" class="producto-img" alt="{{nombre}}">
+          <div class="card-body producto-body">
+            <h5 class="card-title">{{{nombre}}}</h5>
+            <p class="card-text">${{precio}}</p>
+            <div class="tooltip-container">
+              <a href="#" class="btn btn-ver-mas">Ver más</a>
+              <div class="tooltip-descripcion">
+                {{{descripcion}}}
+              </div>
             </div>
+          </div>
         </div>
-
-        <!-- Desmaquillante -->
-        <div class="col-md-4">
-            <div class="card producto-card">
-                <img src="/img/desmaquillanteblum.jpg" class="producto-img" alt="desmaquillante">
-                <div class="card-body producto-body">
-                    <h5 class="card-title">Desmaquillante bifásico <br>300 ml</h5>
-                    <p class="card-text">$25.999</p>
-                    <div class="tooltip-container">
-                        <a href="#" class="btn btn-ver-mas">Ver más</a>
-                        <div class="tooltip-descripcion">
-                            <strong>Eficaz. Suave. Sin residuos.</strong><br>Desmaquillante bifásico que elimina incluso
-                            el maquillaje
-                            resistente al agua. Fórmula ligera y no grasa.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tonico -->
-        <div class="col-md-4">
-            <div class="card producto-card">
-                <img src="/img/tonicoblum.jpg" class="producto-img" alt="tonico">
-                <div class="card-body producto-body">
-                    <h5 class="card-title">Tónico hidratante <br>275 ml</h5>
-                    <p class="card-text">$18.000</p>
-                    <div class="tooltip-container">
-                        <a href="#" class="btn btn-ver-mas">Ver más</a>
-                        <div class="tooltip-descripcion">
-                            <strong>Refresca. Calma. Equilibra.</strong><br>Tónico facial hidratante con acción
-                            descongestiva. Revitaliza
-                            la piel y restaura su confort natural. Ideal para todo tipo de piel, incluso las más
-                            sensibles.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Serum -->
-        <div class="col-md-4">
-            <div class="card producto-card">
-                <img src="/img/serumblum.jpg" class="producto-img" alt="serum">
-                <div class="card-body producto-body">
-                    <h5 class="card-title">Sérum con AH <br>50 ml</h5>
-                    <p class="card-text">$35.500</p>
-                    <div class="tooltip-container">
-                        <a href="#" class="btn btn-ver-mas">Ver más</a>
-                        <div class="tooltip-descripcion">
-                            <strong>Hidratación profunda. Piel radiante.</strong><br>Sérum con ácido hialurónico de
-                            rápida absorción.
-                            Rellena, suaviza y mantiene la hidratación. Ideal para todo tipo de piel.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Crema -->
-        <div class="col-md-4">
-            <div class="card producto-card">
-                <img src="/img/cremablum.jpg" class="producto-img" alt="crema">
-                <div class="card-body producto-body">
-                    <h5 class="card-title">Crema gel hidratante <br>100 ml</h5>
-                    <p class="card-text">$28.800</p>
-                    <div class="tooltip-container">
-                        <a href="#" class="btn btn-ver-mas">Ver más</a>
-                        <div class="tooltip-descripcion">
-                            <strong>Hidratación fresca y ligera. Piel suave y confortable.</strong><br>Crema gel de
-                            rápida absorción.
-                            Refresca, hidrata y revitaliza. Ideal para todo tipo de piel.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Protector -->
-        <div class="col-md-4">
-            <div class="card producto-card">
-                <img src="/img/protectorblum.jpg" class="producto-img" alt="protector">
-                <div class="card-body producto-body">
-                    <h5 class="card-title">Protector solar +50 <br>80 ml</h5>
-                    <p class="card-text">$30.999</p>
-                    <div class="tooltip-container">
-                        <a href="#" class="btn btn-ver-mas">Ver más</a>
-                        <div class="tooltip-descripcion">
-                            <strong>Protección máxima. Piel segura todo el día.</strong><br>Protector solar FPS +50 de
-                            textura ligera.
-                            Absorción rápida, protege contra rayos UVA y UVB.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
+    {{/each}}
+  </div>
 </div>
 
 <!-- ACÁ CIERRA PRODUCTOS -->
